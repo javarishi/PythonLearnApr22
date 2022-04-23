@@ -1,0 +1,1 @@
+print("Package initializer for learn_day010")

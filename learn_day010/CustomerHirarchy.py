@@ -36,8 +36,13 @@ class PreferredCustomer(Customer):
         return "{} has {} % discount".format(self.name, "3")
 
 
+class GoogleMapValidation:
 
-class CreditCardCustomer(PreferredCustomer):
+    def validate(self, address):
+        print("Google Map Validation for {} ".format(address))
+
+
+class CreditCardCustomer(PreferredCustomer, GoogleMapValidation):
 
     def __init__(self, age, gender, purchasePower, name, email, address, ssn):
         PreferredCustomer.__init__(self, age, gender, purchasePower, name, email, address)
